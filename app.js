@@ -205,6 +205,18 @@ app.route('/api/authors/:author_id')
         });
     });
 
+app.route('/api/authors/:author_id/books')
+  .get(function (req, res) {
+    Book.findAll({
+      where: {
+          author_id: req.params.author_id
+      },
+      attributes: ['id', 'title', 'year', 'pages']
+    }).then(function (author) {
+      res.json(author);
+    });
+  });
+
 // BOOKS API
 
 app.route('/api/books')
