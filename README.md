@@ -27,7 +27,7 @@
 `npm install`
 
 ###### Запустить node-сервер
-`node app.js`
+`npm start`
 
 ###### Открыть ссылку для просмотра проекта
 `http://localhost:3000`
